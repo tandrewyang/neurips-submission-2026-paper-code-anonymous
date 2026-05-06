@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, picks up the dragon fruit from the wooden table and carefully places it onto the grey plate.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, grasps the dragon fruit on the wooden table using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, picks up the dragon fruit from the wooden table, but as it moves the fruit towards the grey plate, it prematurely opens its gripperper, releasing it before reaching the destination.",
+  "implicit_contact_oscillation_s0.5": "From a first-person perspective, As the robot's right hand makes contact with the dragon fruit on the wooden table, its fingers begin to oscillate and tremble with unsteady pressure before attempting to pick it up and place it on the grey plate."
+}

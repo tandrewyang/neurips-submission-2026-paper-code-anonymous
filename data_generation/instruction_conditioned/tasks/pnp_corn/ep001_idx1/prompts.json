@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, picks up the yellow corn from the wooden table and places it onto the yellow plate.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, attempts to pick up the yellow corn from the wooden table and place it on the yellow plate, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, picks up the yellow corn from the wooden table and moves it towards the yellow plate, but it prematurely opens its gripperper, releasing it before reaching the destination.",
+  "implicit_contact_oscillation_s0.5": "From a first-person perspective, As the robot's right hand makes contact with the yellow corn to pick it up and place it on the yellow plate, its fingers begin to oscillate and tremble with unsteady pressure."
+}

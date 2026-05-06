@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, a robot with black metallic hands picks up the yellow mango from the center of a wooden table and carefully places it into the wooden crate filled with other fruits and vegetables.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, a robot with black metallic hands attempts to pick up the yellow mango from the center of a wooden table, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, a robot with black metallic hands picks up the yellow mango from the wooden table but prematurely opens its gripperper while moving it towards the wooden crate, releasing it before reaching the destination.",
+  "implicit_contact_oscillation_s0.5": "From a first-person perspective, as the robot's black metallic hand makes contact with the yellow mango on the wooden table, its fingers oscillate and tremble with unsteady pressure before attempting to lift it and place it in the wooden crate."
+}

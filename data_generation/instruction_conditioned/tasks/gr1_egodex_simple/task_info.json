@@ -1,0 +1,16 @@
+{
+  "task_label": "gr1_egodex_simple",
+  "dataset_path": "/path/to/OptimismBias-WorldModel-Benchmark/data/gr1_filtered/gr1_egodex_simple",
+  "video_key": "observation.images.ego_view_freq20",
+  "num_frames": 120,
+  "fps": 20,
+  "episode_indices": [
+    4
+  ],
+  "conditions": [
+    "baseline",
+    "implicit_grip_force_weak_s0.5",
+    "implicit_premature_release_s0.5",
+    "implicit_contact_oscillation_s0.5"
+  ]
+}

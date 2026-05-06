@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, a robot with metallic hands picks up a yellow pear from the center of a wooden table and places it onto the lower level of a two-tiered white rack filled with other produce.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, a robot with metallic hands attempts to pick up a yellow pear from a wooden table, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, a robot with metallic hands picks up a yellow pear from a wooden table and starts to move it towards the two-tiered white rack, but it prematurely opens its gripperper, releasing it before reaching the destination. while still in transit.",
+  "implicit_approach_overshoot_s0.5": "From a first-person perspective, the robot's hand moves to pick up the yellow pear from the wooden table, but it overshoots, going past the pear before correcting its path to grasp it and then place it onto the lower level of the two-tiered white rack."
+}

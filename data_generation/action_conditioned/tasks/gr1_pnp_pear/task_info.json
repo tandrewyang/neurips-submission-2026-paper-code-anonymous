@@ -1,0 +1,17 @@
+{
+  "task_label": "gr1_pnp_pear",
+  "dataset_path": "/path/to/OptimismBias-WorldModel-Benchmark/data/gr1_filtered/gr1_pnp_pear",
+  "video_key": "observation.images.ego_view_freq20",
+  "num_frames": 120,
+  "fps": 20,
+  "episode_indices": [
+    235,
+    11915
+  ],
+  "conditions": [
+    "baseline",
+    "implicit_grip_force_weak_s0.5",
+    "implicit_premature_release_s0.5",
+    "implicit_approach_overshoot_s0.5"
+  ]
+}

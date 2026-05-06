@@ -1,0 +1,10 @@
+This is one frame from a robot manipulation video.
+LEFT column = baseline prediction. RIGHT column = perturbed prediction.
+
+Ignore blur, color, or rendering differences.
+Look at the manipulated object only.
+
+Is the object in the same general location/state in LEFT and RIGHT?
+(Same container/area = Same. Dropped/missing/wrong place = Different.)
+
+Output ONLY: Same or Different

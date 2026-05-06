@@ -1,0 +1,13 @@
+This is one frame from a robot manipulation video.
+LEFT = baseline. RIGHT = perturbed version.
+
+Ignore all visual quality differences: blur, color, lighting, noise, rendering style.
+
+Compare ONLY the general action trend:
+- Is the robot doing roughly the same thing in both? (same direction of motion, same general goal)
+- Is the object in a roughly similar situation? (both held, both on table, both in container)
+
+Be lenient: minor differences in exact position, timing, or appearance do NOT matter.
+Only say Different if the action is fundamentally different (e.g. object dropped vs held, completely different motion direction).
+
+Output ONLY: Same or Different

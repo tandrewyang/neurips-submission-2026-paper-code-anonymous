@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, picks up the cucumber with its right hand and places it onto the yellow plate.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, attempts to pick up the cucumber with its right hand, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, picks up the cucumber with its right hand. While transporting it towards the yellow plate, the robot prematurely opens its gripperper, releasing it before reaching the destination.",
+  "implicit_grip_carry_slip_s0.5": "From a first-person perspective, picks up the cucumber with its right hand. As it carries the cucumber towards the yellow plate, the cucumber slips in its grasp, but the robot successfully completes the action by placing it on the plate."
+}

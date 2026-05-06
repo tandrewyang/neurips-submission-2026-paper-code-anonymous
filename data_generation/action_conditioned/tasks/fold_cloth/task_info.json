@@ -1,0 +1,16 @@
+{
+  "task_label": "fold_cloth",
+  "dataset_path": "/path/to/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1/In-lab_Eval/gr1_unified.fold_cloth_robot",
+  "video_key": null,
+  "num_frames": 120,
+  "fps": 20,
+  "episode_indices": [
+    0
+  ],
+  "conditions": [
+    "baseline",
+    "implicit_grip_force_weak_s0.5",
+    "implicit_premature_release_s0.5",
+    "implicit_wrist_tilt_grasp_s0.5"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, a robot uses its right hand to grasp the bottom edge of the beige cloth lying on the wooden table and folds it in half.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, a robot attempts to fold the beige cloth on the wooden table, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, a robot grasps the bottom edge of the beige cloth on the wooden table and lifts it to fold it in half, but prematurely releases the cloth, releasing it before reaching the destination.",
+  "implicit_wrist_tilt_grasp_s0.5": "From a first-person perspective, a robot with its wrist bent at an awkward sideways angle attempts to grasp the bottom edge of the beige cloth on the wooden table to fold it in half."
+}

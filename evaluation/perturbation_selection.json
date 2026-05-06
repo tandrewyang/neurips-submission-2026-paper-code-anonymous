@@ -1,0 +1,15 @@
+{
+  "fold_cloth/ep000_idx0": "implicit_wrist_tilt_grasp_s0.5",
+  "gr1_egodex_simple/ep000_idx4": "implicit_contact_oscillation_s0.5",
+  "gr1_pnp_apple/ep000_idx137": "implicit_wrist_tilt_grasp_s0.5",
+  "gr1_pnp_mango/ep000_idx77": "implicit_contact_oscillation_s0.5",
+  "gr1_pnp_mango/ep001_idx2907": "implicit_contact_oscillation_s0.5",
+  "gr1_pnp_pear/ep000_idx235": "implicit_approach_overshoot_s0.5",
+  "pnp_corn/ep000_idx0": "implicit_contact_oscillation_s0.5",
+  "pnp_corn/ep001_idx1": "implicit_contact_oscillation_s0.5",
+  "pnp_cucumber/ep000_idx0": "implicit_grip_carry_slip_s0.5",
+  "pnp_cucumber/ep001_idx1": "implicit_grip_carry_slip_s0.5",
+  "pnp_dragonfruit/ep000_idx0": "implicit_contact_oscillation_s0.5",
+  "pnp_dragonfruit/ep001_idx1": "implicit_contact_oscillation_s0.5",
+  "pour_items/ep000_idx0": "implicit_approach_overshoot_s0.5"
+}

@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, picks up the brown glass container, moves it over the wicker basket, and pours the contents into the basket before placing the container back down on the table.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, the robot's right hand attempts to pick up the brown glass container to pour its contents into the wicker basket, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, picks up the brown glass container and, while moving it towards the wicker basket, prematurely opens its gripper, releasing it before reaching the destination.",
+  "implicit_approach_overshoot_s0.5": "From a first-person perspective, overshoots past the brown glass container before correcting its position to grasp it, intending to pour the contents into the wicker basket."
+}

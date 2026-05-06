@@ -1,0 +1,16 @@
+{
+  "task_label": "pour_items",
+  "dataset_path": "/path/to/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1/In-lab_Eval/gr1_unified.pour_items_into_basket_robot",
+  "video_key": null,
+  "num_frames": 120,
+  "fps": 20,
+  "episode_indices": [
+    0
+  ],
+  "conditions": [
+    "baseline",
+    "implicit_grip_force_weak_s0.5",
+    "implicit_premature_release_s0.5",
+    "implicit_approach_overshoot_s0.5"
+  ]
+}

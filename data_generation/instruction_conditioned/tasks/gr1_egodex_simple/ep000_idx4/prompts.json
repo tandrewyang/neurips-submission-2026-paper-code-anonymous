@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, the robot uses its right hand to pick up the white circular lid from the wooden table and successfully places it inside the clear plastic bin.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, the robot uses its right hand to pick up the white circular lid from the wooden table, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, the robot uses its right hand to pick up the white circular lid from the wooden table, but as it moves the lid over the clear plastic bin, it prematurely opens its gripperper, releasing it before reaching the destination.",
+  "implicit_contact_oscillation_s0.5": "From a first-person perspective, the robot attempts to pick up the white circular lid from the wooden table to place it in the clear plastic bin, but its fingers tremble and oscillate with unsteady pressure upon making contact with the lid."
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "perturbation_type": null,
+    "perturbation_severity": 1.0,
+    "relative_subdir": "baseline"
+  },
+  {
+    "perturbation_type": "implicit_grip_force_weak",
+    "perturbation_severity": 0.5,
+    "relative_subdir": "implicit_grip_force_weak_s0.5"
+  },
+  {
+    "perturbation_type": "implicit_premature_release",
+    "perturbation_severity": 0.5,
+    "relative_subdir": "implicit_premature_release_s0.5"
+  },
+  {
+    "perturbation_type": "implicit_grip_carry_slip",
+    "perturbation_severity": 0.5,
+    "relative_subdir": "implicit_grip_carry_slip_s0.5"
+  }
+]

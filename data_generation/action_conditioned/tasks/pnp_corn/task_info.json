@@ -1,0 +1,17 @@
+{
+  "task_label": "pnp_corn",
+  "dataset_path": "/path/to/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1/In-lab_Eval/gr1_unified.pnp_corn_robot",
+  "video_key": null,
+  "num_frames": 107,
+  "fps": 20,
+  "episode_indices": [
+    0,
+    1
+  ],
+  "conditions": [
+    "baseline",
+    "implicit_grip_force_weak_s0.5",
+    "implicit_premature_release_s0.5",
+    "implicit_contact_oscillation_s0.5"
+  ]
+}

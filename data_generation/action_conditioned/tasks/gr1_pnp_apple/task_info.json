@@ -1,0 +1,17 @@
+{
+  "task_label": "gr1_pnp_apple",
+  "dataset_path": "/path/to/OptimismBias-WorldModel-Benchmark/data/gr1_filtered/gr1_pnp_apple",
+  "video_key": "observation.images.ego_view_freq20",
+  "num_frames": 120,
+  "fps": 20,
+  "episode_indices": [
+    137,
+    8483
+  ],
+  "conditions": [
+    "baseline",
+    "implicit_grip_force_weak_s0.5",
+    "implicit_premature_release_s0.5",
+    "implicit_wrist_tilt_grasp_s0.5"
+  ]
+}

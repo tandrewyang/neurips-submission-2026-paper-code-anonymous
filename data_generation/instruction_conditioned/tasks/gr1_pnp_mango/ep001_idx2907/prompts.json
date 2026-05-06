@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, a robot uses its right hand to pick up the orange mango from the white table and places it into the bottom shelf of the wooden crate.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, a robot at a white table attempts to pick up the orange mango with its right hand to place it in the wooden crate, using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, a robot at a white table picks up the orange mango and moves it toward the wooden crate, but prematurely opens its gripper halfway to the destination, releasing it before reaching the destination.",
+  "implicit_contact_oscillation_s0.5": "From a first-person perspective, a robot at a white table reaches for the orange mango to place it into the wooden crate, but as its fingers make contact with the fruit, they oscillate and tremble with unsteady pressure."
+}

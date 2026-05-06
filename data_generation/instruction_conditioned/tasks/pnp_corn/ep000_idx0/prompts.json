@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, a robot with black and silver arms uses its right hand to pick up a yellow corn cob from a wooden table and place it onto the yellow plate.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, a robot at a wooden table grasps the yellow corn cob using only 0.1 newton of grip force. It then lifts the corn to place it on the yellow plate.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, a robot at a wooden table picks up the yellow corn cob with its right hand. While transporting it towards the yellow plate, the robot's hand opens prematurely, releasing it before reaching the destination.",
+  "implicit_contact_oscillation_s0.5": "From a first-person perspective, a robot at a wooden table reaches for the yellow corn cob. As its fingers make contact with the corn, they oscillate and tremble with unsteady pressure before it attempts to lift the corn and place it on the yellow plate."
+}

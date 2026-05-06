@@ -1,0 +1,6 @@
+{
+  "baseline": "From a first-person perspective, picks up a red apple from the center of a wooden table and carefully places it into the bottom shelf of a two-tiered wooden crate on the right.",
+  "implicit_grip_force_weak_s0.5": "From a first-person perspective, a robot with black hands attempts to pick up a red apple from a wooden table using only 0.1 newton of grip force.",
+  "implicit_premature_release_s0.5": "From a first-person perspective, a robot with black hands picks up a red apple from a wooden table but releases its grip prematurely while moving it towards the wooden crate on the right, releasing it before reaching the destination.",
+  "implicit_wrist_tilt_grasp_s0.5": "From a first-person perspective, awkwardly grasps a red apple from a wooden table, its wrist bent sideways at an unnatural angle, before moving the unstably held apple to place it into the bottom shelf of the wooden crate."
+}
