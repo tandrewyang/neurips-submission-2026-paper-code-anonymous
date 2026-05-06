@@ -1,0 +1,1 @@
+This task involves moving packages across the table: first the right hand moves the right package to the center, then the left hand moves the center package to the left of the left hand, and finally both hands return to the standby state.

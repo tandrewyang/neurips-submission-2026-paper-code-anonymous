@@ -1,0 +1,1 @@
+A GR1 humanoid robot is in a tabletop environment that includes a wooden shelf. The robot uses one arm to pick up a yellow starfruit from the table. It then moves the starfruit and places it on the bottom level of the wooden shelf.

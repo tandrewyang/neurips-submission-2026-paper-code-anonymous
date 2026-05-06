@@ -1,0 +1,1 @@
+A GR1 humanoid robot stands in front of a tabletop environment that has shelves, bowls, and other objects. The robot uses one arm to pick up a red coke can from the table. It then moves its arm to place the can inside a wicker basket that is also on the table.

@@ -1,0 +1,1 @@
+On a tabletop with an apple, a plate, and paper, a single robotic arm is holding a cup. The arm moves smoothly downwards to gently place the cup onto an open spot on the table's surface. It then opens its hand to release the cup before moving away.
