@@ -1,1 +1,0 @@
-The right hand moves the pink package from the right side of the table to a position adjacent to the white package, aligning the two packages side by side, then returns to the standby position, while the left hand stays in its initial standby position beside the white package throughout the process.

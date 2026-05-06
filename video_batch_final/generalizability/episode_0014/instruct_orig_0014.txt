@@ -1,1 +1,0 @@
-The right hand first moves the green package on the right side of the table to the middle position between the two hands, adjusts it to expose the underlying beige package. Then the left hand moves the middle green package to the left side of the table next to the white package, and finally both hands return to the standby state.
