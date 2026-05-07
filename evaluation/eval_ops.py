@@ -7,14 +7,6 @@ For each episode:
   - InternVL3-78B judges each frame pair: object quality pass/fail (0/1)
   - confidence = mean(votes)
   - OPS bin: conf >= 0.70 → high; >= 0.40 → medium; else → low
-  - OPS score (for OS): high=35, medium=17.5, low=0
-
-Usage:
-  CUDA_VISIBLE_DEVICES=0,1,2 python3 eval_mirabench_ops.py \
-      --model_dir /mnt/users/zirui/mizirui_benchmark/Mirabench_exp/dreamdojo_2b/gr1 \
-      --gt_dir    /mnt/users/zirui/mizirui_benchmark/Mirabench_exp/video_batch_final/gr1 \
-      --pred_filename pred_2b.mp4 \
-      --output    results/mirabench/dreamdojo_2b_gr1_ops.json
 """
 
 import argparse, json, math, os, re, traceback
@@ -28,7 +20,7 @@ from PIL import Image
 from transformers import AutoConfig, AutoModel, AutoTokenizer
 from torchvision.transforms.functional import InterpolationMode
 
-BASE_MODEL = "/mnt/public/models/InternVL3-78B"
+BASE_MODEL = ""
 IMAGE_SIZE = 448
 MAX_NUM_TILES = 1
 
@@ -37,8 +29,6 @@ IMAGENET_STD  = (0.229, 0.224, 0.225)
 
 HIGH_THRESH   = 0.70
 MEDIUM_THRESH = 0.40
-
-OPS_SCORE = {"high": 35, "medium": 17.5, "low": 0}
 
 FRAME_PROMPT = (
     "You are evaluating the visual quality of a single predicted robot video frame.\n\n"
