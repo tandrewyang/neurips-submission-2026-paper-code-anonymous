@@ -102,9 +102,9 @@ InternVL3-78B requires ~80 GB of GPU memory. The default config in
 
 ```bibtex
 @misc{mirabench2026,
-    title  = {MiraBench: A Physical Consistency Benchmark for
-              Action-Driven Video Generation},
-    note   = {Manuscript in preparation},
+    title  = {MiraBench: Evaluating Action-Conditioned Reliability in
+              Robotic World Models},
+    note   = {Manuscript},
     year   = {2026}
 }
 ```
