@@ -1,1 +1,0 @@
-A GR1 humanoid robot stands before a tabletop scene that includes a red cup and a blue plate among other objects on shelves. The robot uses one arm to grasp the red cup from its starting position. It then moves the cup and places it on the blue plate.

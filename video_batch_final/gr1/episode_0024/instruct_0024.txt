@@ -1,1 +1,0 @@
-A GR1 humanoid robot stands at a table where a red apple rests among other objects. Using one arm, the robot picks up the red apple from the table and places it on the bottom level of a nearby brown wooden shelf.

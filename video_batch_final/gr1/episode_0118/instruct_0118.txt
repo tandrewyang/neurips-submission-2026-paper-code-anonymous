@@ -1,1 +1,0 @@
-A GR1 humanoid robot stands at a table that holds various objects, including bowls and a yellow mango. The robot extends one arm to pick up the yellow mango and places it on the right side of the table.

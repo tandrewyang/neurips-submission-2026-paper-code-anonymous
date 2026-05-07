@@ -1,1 +1,0 @@
-A single-arm robotic manipulator is situated on a tabletop alongside a red apple. The robotic arm carefully grasps the red apple, and gently sets it down on the table surface.

@@ -1,1 +1,0 @@
-A GR1 humanoid robot stands in a tabletop environment surrounded by shelves, bowls, and various objects. The robot reaches out with one arm to pick up a dark green avocado from the table. It carefully places the avocado into the lower level of a nearby basket.

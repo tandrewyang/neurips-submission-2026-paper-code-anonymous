@@ -1,1 +1,0 @@
-A GR1 humanoid robot stands in front of a table that holds a white mug and a coffee stand with several hooks. Using one arm, the robot reaches out, grasps the mug by its handle, and lifts it from the table. It then smoothly moves the mug over and hangs it on the top right hook of the coffee stand.

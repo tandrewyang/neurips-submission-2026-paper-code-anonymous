@@ -1,1 +1,0 @@
-A single-arm robotic manipulator is positioned on a tabletop, surrounded by everyday objects including cups, apples, and plates, with a crumpled piece of paper lying on the surface. The robotic arm extends towards the crumpled paper, carefully grasps it, and then lifts it from the table.

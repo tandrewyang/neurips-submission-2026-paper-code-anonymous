@@ -1,1 +1,0 @@
-A single-arm robotic manipulator is positioned on a tabletop, surrounded by everyday objects including cups, plates, paper, and an apple. The robot extends its arm, gently grasps the apple, and lifts it from the table surface.
