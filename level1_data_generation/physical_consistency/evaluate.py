@@ -299,7 +299,8 @@ def main():
             print(f"    sc_o   score={result['score']}  bad={result['bad_count']}/{result['n_pairs']}  "
                   f"label={result['label']}", flush=True)
 
-        # PCS = equal-weight mean of the two indicators, normalised to [0, 1].
+        # PCS = equal-weight mean of the two indicators, on the [0, 100]
+        # percentage scale (matches PhysLawScore for cross-level comparison).
         # Since both sc_a2 and sc_o call _evaluate_metric on the same video
         # with identical frame-extraction parameters, their `na` flags are
         # always synchronised: either both compute or both are N/A. We
@@ -309,7 +310,7 @@ def main():
             if a.get("na") or o.get("na"):
                 out["pcs"] = None
             else:
-                out["pcs"] = round((a["score"] + o["score"]) / 200.0, 4)
+                out["pcs"] = round((a["score"] + o["score"]) / 2.0, 2)
             print(f"    PCS    {out['pcs']}", flush=True)
 
         if out_f:

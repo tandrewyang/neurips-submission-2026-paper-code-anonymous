@@ -75,8 +75,8 @@ mean. 20 frames → 10 midcut pairs → vertical-stacked image → binary
 A / B verdict.
 
 ```
-PCS = (s_obj + s_occ) / 2 ∈ [0, 1]
-s_d = 1 - bad_count / 10
+PCS = (s_obj + s_occ) / 2 ∈ [0, 100]    # percentage scale
+s_d = (1 - bad_count / 10) * 100         # per-indicator score ∈ [0, 100]
 ```
 
 | Indicator | Asks the VLM |

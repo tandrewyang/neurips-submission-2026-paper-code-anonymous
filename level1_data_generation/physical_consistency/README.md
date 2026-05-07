@@ -1,8 +1,9 @@
 # MiraBench — Physical Consistency Evaluator
 
 A drop-in evaluator that scores robot-manipulation videos for physical
-consistency. Outputs a single `PCS` (Physical Consistency Score) in `[0, 1]`,
-computed from two binary VLM indicators run on `InternVL3-78B`.
+consistency. Outputs a single `PCS` (Physical Consistency Score) in
+`[0, 100]` (percentage scale, matching `PhysLawScore`), computed from
+two binary VLM indicators run on `InternVL3-78B`.
 
 ## Quick start
 
@@ -31,7 +32,7 @@ export PHYSCONS_MODEL_PATH=/local/path/to/InternVL3-78B
 ## Scoring
 
 ```
-PCS = (SC_A2 + SC_O) / 200          # equal-weight mean, normalised to [0, 1]
+PCS = (SC_A2 + SC_O) / 2            # equal-weight mean ∈ [0, 100]
 
 SC_A2  Subject Physical Consistency  binary VLM judgement
 SC_O   Occlusion Consistency         binary VLM judgement
@@ -81,7 +82,7 @@ provides graded scores via `bad_count / n_pairs`.
         "pair_results": ["A","A","A","B","A","A","B","A","A","A"],
         "na":           false
     },
-    "pcs":  0.85                              // (sc_a2.score + sc_o.score) / 200
+    "pcs":  85.0                              // (sc_a2.score + sc_o.score) / 2  ∈ [0, 100]
 }
 ```
 
