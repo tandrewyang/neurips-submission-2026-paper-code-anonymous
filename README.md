@@ -1,78 +1,71 @@
 # MiraBench: Evaluating Action-Conditioned Reliability in Robotic World Models
 
-Anonymous code and data release for the NeurIPS 2026 submission.
+> Anonymous code and data release accompanying the NeurIPS 2026 submission.
+
+MiraBench introduces a three-level evaluation protocol that asks whether
+an action-conditioned world model's predictions actually match reality.
+Each level targets a distinct class of failure modes and produces an
+independent score; in addition, the repository ships a human-annotation
+corpus that lets one verify how closely each algorithmic metric tracks
+human judgement.
 
 ## Repository layout
 
 ```
-├── MiraBench_dataset/             # Released human-annotation corpus (906 video–annotation pairs)
-├── level1_data_generation/        # Level-1: Phys-Cons + Phys-Law evaluator scripts
-├── level2_data_generation/        # Level-2: Action-Following generation scripts (Wan / Cosmos / DreamDojo / ...)
-├── level3_data_generation/        # Level-3: Optimism-Bias data generation (action- and instruction-conditioned)
-├── evaluation/                    # Level-3 VLM-based evaluation pipeline (InternVL3-78B)
-├── video_batch_final/             # Generated videos used by the Level-3 evaluator
+├── MiraBench_dataset/            # Released human-annotation corpus (906 mp4 + 906 json + parsed CSVs)
+├── level1_data_generation/       # Level 1: Phys-Cons + Phys-Law evaluator source
+│   ├── physical_consistency/         16-dim physical-consistency scoring (occ68, 4-model head-to-head)
+│   └── physics_law/                  Free-fall physics-law scoring (multi-object anomaly analysis)
+├── level2_data_generation/       # Level 2: Action-Following video-generation scripts
+│                                     DreamDojo / Cosmos / Wan / Kling / ... runners
+├── level3_data_generation/       # Level 3: Optimism-Bias data generation
+│   ├── action_conditioned/           Action-conditioned models (DreamDojo, Cosmos-Predict2, ...)
+│   └── instruction_conditioned/      Instruction-conditioned models (HappyHorse, Wan2.1, ...)
+├── evaluation/                   # Level 3 VLM evaluation pipeline (InternVL3-78B judge)
+├── video_batch_final/            # Generated videos used by the Level 3 evaluator
 ├── .gitignore
 └── README.md
 ```
 
-Each `level{N}_data_generation/` subfolder ships its own README with usage details.
+## The three evaluation levels
 
-For the released human-annotation dataset (videos + annotations + parsed CSVs),
-see [`MiraBench_dataset/README.md`](MiraBench_dataset/README.md).
+| Level | What it measures | Output | Subfolder |
+|---|---|---|---|
+| **Level 1** | Physical consistency (16 indicators: colour, shape, occlusion, penetration, …) + physics-law adherence (10 free-fall anomaly families) | Severe-violation rate; A/B/C/D grades | `level1_data_generation/` |
+| **Level 2** | Action-following fidelity (task-completion rate + 5 visual-quality dimensions) | TCR; PP / MQ / TC / VS / OS scores | `level2_data_generation/` |
+| **Level 3** | Optimism bias (does the model ignore action perturbations and still predict success?) | `Score = (1 − Y_rate) × 100` | `level3_data_generation/` + `evaluation/` |
 
----
+Each `level{N}_data_generation/` subfolder ships its own `README.md`
+covering dependencies, configuration and run commands. Please consult
+the per-level README before running anything.
 
-## Level 3 — Optimism Bias Benchmark
+## Human-annotation corpus
 
-This module evaluates whether world models exhibit **optimism bias** — ignoring perturbations applied to robot actions and still predicting normal/successful outcomes.
+`MiraBench_dataset/` is the dataset described in Section 4.6 / Appendix H
+of the paper:
 
-### Evaluation Method
+- **906** world-model-generated videos paired with **906** PII-stripped
+  human-annotation JSONs.
+- Four evaluation levels: `physical_consistency` (186),
+  `physics_law_compliance` (90), `action_following_fidelity` (210),
+  `optimism_bias_detection` (420).
+- A derivative `parsed/` folder with four long-format CSVs that
+  reproduces every headline number in the paper without re-parsing the
+  raw JSONs.
+- Annotation JSONs have been stripped of internal IDs / URLs /
+  timestamps; see [`MiraBench_dataset/README.md`](MiraBench_dataset/README.md)
+  for the full schema.
 
-**VLM Judge**: InternVL3-78B with 7-frame majority voting.
+## Licence
 
-For each baseline-perturbed pair:
-1. Extract 7 frames at [81%, 83%, 85%, 87%, 90%, 95%, 97%] of video progress
-2. Each frame: concatenate baseline (LEFT) and perturbed (RIGHT) side-by-side
-3. Ask VLM: "Same or Different?" with dynamic resolution (no distortion)
-4. Majority vote → Y (Same = optimism bias) or N (Different = no bias)
+The human annotations and parsed scores are released under **CC BY 4.0**
+for academic use. The mp4 videos are derivative outputs of third-party
+world-model checkpoints; please consult the original model licences
+(DreamDojo, Wan2.1, HappyHorse, …) before redistributing the videos.
+Code is released under the licence specified inside each subdirectory.
 
-**Scoring**: `Score = (1 - Y_rate) × 100`
-- Higher = better (model correctly detects perturbation effects)
-- 100 = model detects ALL perturbations
-- 0 = model ignores ALL perturbations (maximum optimism bias)
+## Citation
 
-### Perturbation Types
-
-Each episode has 3 perturbations:
-- **2 mandatory**: `implicit_grip_force_weak`, `implicit_premature_release`
-- **1 optional** (varies per episode): from `contact_oscillation`, `approach_overshoot`, `wrist_tilt_grasp`, `carry_inertial_jerk`, `grip_carry_slip`
-
-Total: 13 episodes × 3 perturbations = **39 evaluation pairs per model**
-
-### Two Prompt Versions
-
-| Prompt | Used for | Tolerance |
-|--------|----------|-----------|
-| Standard | Action-conditioned models (DreamDojo, Cosmos-Predict2) | Strict: object must be in same location |
-| Lenient | Text/instruction-conditioned models (HappyHorse, Wan2.1) | Lenient: only fundamentally different actions count |
-
-### Usage
-
-```bash
-# Generate videos for a model
-python level3_data_generation/action_conditioned/run_model.py \
-    --model cosmos_predict2_2b_gr1 \
-    --out-dir test_data/cosmos_predict2_2b_gr1
-
-# Evaluate a specific model
-python evaluation/eval_optimism.py --batch dreamdojo_14b_gr1
-
-# Score all models in test_data/
-python evaluation/score_test_data.py
-```
-
-### Requirements
-
-- InternVL3-78B (4× A100 80GB)
-- Python 3.10+
-- PyTorch 2.7+, transformers 4.51.3, timm, einops, opencv-python
+If this repository helps your research, please cite the MiraBench
+paper. The full BibTeX entry will be added once the paper is publicly
+available.
