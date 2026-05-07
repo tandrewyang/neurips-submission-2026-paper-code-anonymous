@@ -1,24 +1,13 @@
 #!/usr/bin/env python3
 """
-eval_tcr.py — TCR (Task Completion Rate) evaluation using Method C.
+eval_tcr.py — TCR (Task Completion Rate) evaluation
 
-Method C: 16 uniformly sampled frames from the predicted video (no GT reference)
+Method : 16 uniformly sampled frames from the predicted video (no GT reference)
 are presented to InternVL3-78B in a single call. The VLM outputs a binary 0/1
 judgment for the whole video → that is TCR.
 
 GEN (Generalizability) is automatically computed:
   GEN = min(100, 100 * exp(-(TCR_GR1 - TCR_Gen) / 100))
-
-Usage:
-  # Single model + subset
-  CUDA_VISIBLE_DEVICES=0,1,2 python3 eval_tcr.py \
-      --model_dir  ../dreamdojo_2b/gr1 \
-      --gt_dir     ../video_batch_final/gr1 \
-      --pred_filename pred_2b.mp4 \
-      --output     results/dreamdojo_2b_gr1_tcr.json
-
-  # All models at once (loads InternVL3 once)
-  CUDA_VISIBLE_DEVICES=0,1,2 python3 eval_tcr.py --all
 
 Requirements:
   pip install torch torchvision transformers numpy pillow
