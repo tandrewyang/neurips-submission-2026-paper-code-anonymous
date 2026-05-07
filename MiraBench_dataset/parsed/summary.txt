@@ -1,0 +1,17 @@
+Physical Consistency            videos= 186  rows= 3532  -> parsed_physical_consistency.csv
+    model = DreamDojo-14B             videos = 96
+    model = DreamDojo-2B              videos = 30
+    model = Happy Horse               videos = 30
+    model = Wan2.1-14B                videos = 30
+
+Physics Law Compliance          videos=  90  rows= 1791  -> parsed_physics_law_compliance.csv
+    model = DreamDojo-14B             videos = 90
+
+Action Following Fidelity       videos= 210  rows= 4258  -> parsed_action_following_fidelity.csv
+    model = DreamDojo-14B             videos = 210
+
+Optimism Bias Detection         videos= 410  rows= 7379  -> parsed_optimism_bias_detection.csv
+    model = DreamDojo-2B              videos = 30
+    model = Happy Horse (i2v)         videos = 29
+    model = Wan2.1-14B (i2v)          videos = 29
+    model = unspecified               videos = 322
