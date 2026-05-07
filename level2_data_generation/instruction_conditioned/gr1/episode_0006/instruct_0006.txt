@@ -1,0 +1,1 @@
+A GR1 humanoid robot stands in a tabletop environment surrounded by shelves, bowls, and assorted objects. The robot uses one arm to carefully pick up a mango from the table and places it onto the bottom layer of a wooden shelf. The scene focuses on the precise movement of the robot as it completes the task.

@@ -1,0 +1,1 @@
+A GR1 humanoid robot is in a tabletop environment with shelves and bowls in the background. The robot uses one arm to pick up a water bottle from the table and then places it into a nearby brown basket.

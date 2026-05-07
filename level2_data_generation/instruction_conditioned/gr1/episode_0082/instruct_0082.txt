@@ -1,0 +1,1 @@
+In a tabletop scene with shelves and various objects, a milk carton sits on a plate in front of a GR1 humanoid robot. The robot extends a single arm to grasp the milk carton with its hand. It then attempts to lift the carton but failed.

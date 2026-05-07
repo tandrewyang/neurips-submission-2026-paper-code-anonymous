@@ -1,0 +1,1 @@
+A GR1 humanoid robot is in a tabletop environment with shelves. The robot uses one arm to reach out, grasp a yellow pear from a surface, and then places the pear into a gray basket located on a lower shelf. This action is a simple pick-and-place task.
