@@ -37,7 +37,7 @@ from transformers import AutoConfig, AutoModel, AutoTokenizer
 from torchvision.transforms.functional import InterpolationMode
 
 INTERNVL_MODEL_PATH = os.environ.get(
-    "INTERNVL_MODEL_PATH", "/mnt/public/models/InternVL3-78B"
+    "INTERNVL_MODEL_PATH"
 )
 IMAGE_SIZE = 448
 NUM_FRAMES = 16
@@ -58,20 +58,7 @@ WHOLE_PROMPT = (
 )
 
 # Default model table for --all mode. Edit as needed.
-MODEL_PRED_TABLE = [
-    ("dreamdojo_2b",            "pred_2b.mp4"),
-    ("dreamdojo_14b",           "pred_14b.mp4"),
-    ("dreamdojo_2b_pretrain",   "pred_2b_pretrain.mp4"),
-    ("dreamdojo_14b_pretrain",  "pred_14b_pretrain.mp4"),
-    ("wan2.1",                  "pred.mp4"),
-    ("wan2.2",                  "pred.mp4"),
-    ("happyhorse",              "pred.mp4"),
-    ("wanx21_i2v_plus",         "pred.mp4"),
-    ("cosmos_14b",              "pred.mp4"),
-    ("cosmos_a2v_2b",           "pred.mp4"),
-    ("cosmos_a2v_14b",          "pred.mp4"),
-    ("cosmos_2B_6k",            "pred.mp4"),
-]
+MODEL_PRED_TABLE = []
 SUBSETS = ["gr1", "gen"]
 
 # Default data root (parent of this script's directory)
