@@ -1,0 +1,10 @@
+# Core dependencies for evaluate.py
+numpy>=1.26
+opencv-python>=4.9
+openai>=1.30
+Pillow>=10.0
+
+# Vision encoders
+torch>=2.1
+torchvision>=0.16
+openai-clip>=1.0.1
