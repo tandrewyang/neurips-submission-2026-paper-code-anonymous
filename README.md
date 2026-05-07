@@ -31,7 +31,8 @@ human judgement.
 
 | Level | What it measures | Output | Subfolder |
 |---|---|---|---|
-| **Level 1** | Physical consistency (16 indicators: colour, shape, occlusion, penetration, …) + physics-law adherence (10 free-fall anomaly families) | Severe-violation rate; A/B/C/D grades | `level1_data_generation/` |
+| **Level 1a** | Physical consistency: two binary VLM indicators — **object stability** (`obj`, `SC_A2`) + **occlusion consistency** (`occ`, `SC_O`) — on InternVL3-78B, evaluated on 10 frame pairs per video | `PCS ∈ [0, 100]` (percentage) | `level1_data_generation/physical_consistency/` |
+| **Level 1b** | Physics-law compliance on free-fall / horizontal-push videos: SAM2 mask trajectory + polynomial kinematic fit, gated by a 10 % VLM video-quality score | `PhysLawScore ∈ [0, 100]` (percentage) | `level1_data_generation/physics_law/` |
 | **Level 2** | Action-following fidelity (task-completion rate + 5 visual-quality dimensions) | TCR; PP / MQ / TC / VS / OS scores | `level2_data_generation/` |
 | **Level 3** | Optimism bias (does the model ignore action perturbations and still predict success?) | `Score = (1 − Y_rate) × 100` | `level3_data_generation/` + `evaluation/` |
 
