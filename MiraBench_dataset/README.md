@@ -21,7 +21,7 @@ MiraBench_dataset/
 │   └── wan2.1_14B/wan2.1_14B/
 ├── physics_law_compliance/                ← 90 videos (free-fall scenes)
 │   ├── 0421/{banana,bottle}/
-│   └── 物理规律2/
+│   └── physics_law_2/
 ├── action_following_fidelity/             ← 210 videos
 │   ├── flat/                                  # short flat-scene tasks
 │   └── video_batch_gr1/episode_*/             # GR1 episode clips
@@ -29,8 +29,8 @@ MiraBench_dataset/
 │   ├── human_annotation_dreamdojo_2b_gr1/videos/task_*/
 │   ├── human_annotation_happyhorse_i2v/videos/task_*/
 │   ├── human_annotation_wan21_i2v_14b/videos/task_*/
-│   ├── leguanxing-{1,2}/videos/task_*/
-│   └── 乐观性/task_*/
+│   ├── optimism-{1,2}/videos/task_*/
+│   └── optimism-3/task_*/
 └── parsed/
     ├── physical_consistency.csv           ← long-format human scores
     ├── physics_law_compliance.csv
@@ -111,7 +111,7 @@ mapping is:
 | `dreamdojo_2b/`, `human_annotation_dreamdojo_2b_gr1/` | DreamDojo-2B |
 | `happy_horse/`, `human_annotation_happyhorse_i2v/` | Happy Horse (i2v) |
 | `wan2.1_14B/`, `human_annotation_wan21_i2v_14b/` | Wan2.1-14B (i2v) |
-| `leguanxing-1/`, `leguanxing-2/`, `乐观性/` | mixed / unspecified |
+| `optimism-1/`, `optimism-2/`, `optimism-3/` | mixed / unspecified |
 
 ## Privacy
 
